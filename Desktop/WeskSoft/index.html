@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WESKSOFT — Creating Beyond Imagination</title>
+  <meta name="description" content="WESKSOFT is a creative technology and digital entertainment company building innovative games and animated stories." />
+  <meta name="theme-color" content="#000000" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- রিফ্রেশ করলে যেন নিজে নিজে স্ক্রল না হয় -->
+  <script>
+    if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+    if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+    window.scrollTo(0, 0);
+  </script>
+</head>
+<body>
+
+  <!-- Background art (bg.js) -->
+  <canvas id="bgArt"></canvas>
+  <canvas id="stars"></canvas>
+
+  <!-- Logo -->
+  <header class="top-logo" id="home">
+    <img src="pictures/2.jpg" alt="WaskSoft Logo" class="brand-logo" />
+    <span class="brand-name">WaskSoft</span>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text reveal">
+        <span class="tag">TECHNOLOGY &amp; ENTERTAINMENT & GAMES</span>
+        <h1>WESKSOFT <span class="gradient-text">— Creating Beyond Imagination</span></h1>
+        <p class="lead">
+          WESKSOFT is a creative technology and digital entertainment company focused on
+          building innovative gaming experiences and captivating animated stories.
+        </p>
+        <blockquote class="quote">
+          “The biggest risk is not taking any risk.”
+          <cite>— Mark Zuckerberg</cite>
+        </blockquote>
+        <div class="hero-btns">
+          <a href="#divisions" class="btn btn-primary">Explore Divisions</a>
+          <a href="#game" class="btn btn-ghost">Watch the Demo</a>
+        </div>
+      </div>
+
+      <!-- Game card -->
+      <div class="game-card reveal" id="game">
+        <div class="game-head">
+          <div class="game-title">
+            <span class="live-dot"></span>
+            <div>
+              <strong>Auto Racer</strong>
+              <small>Endless &middot; plays by itself</small>
+            </div>
+          </div>
+          <span class="game-badge">LIVE</span>
+        </div>
+
+        <div class="game-screen">
+          <canvas id="gameCanvas" aria-label="Auto-playing top-down endless racing demo"></canvas>
+        </div>
+
+        <div class="game-stats">
+          <div><b id="stCoins">0</b><span>Coins</span></div>
+          <div><b id="stDist">0.00</b><span>Distance (km)</span></div>
+          <div><b id="stSpeed">0</b><span>Speed (km/h)</span></div>
+        </div>
+      </div>
+
+      <!-- পরে ব্যবহারের জন্য প্রোফাইল ছবির কোড (দরকার হলে এখান থেকে কপি করুন)
+      <div class="profile" id="about">
+        <div class="avatar-wrap">
+          <div class="avatar-ring"></div>
+          <img src="pictures/1.jpeg" alt="Saptadip Sasmal" class="avatar" width="1254" height="1254" />
+        </div>
+        <h2>Saptadip Sasmal</h2>
+        <p class="role">Engineer &amp; Programmer &amp; Animation researcher</p>
+      </div>
+      -->
+    </section>
+
+    <!-- Divisions -->
+    <section class="divisions" id="divisions">
+      <div class="section-head reveal">
+        <span class="tag">What we do</span>
+        <h2>Under the WESKSOFT brand, we operate <span class="gradient-text">two creative divisions</span></h2>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card-visual">
+            <img src="pictures/6.jpeg" alt="Kalpokotha Animation logo" width="1254" height="1254" loading="lazy" decoding="async" />
+          </div>
+          <h3>Kalpokotha Animation</h3>
+          <p>Bringing imagination to life through animation, visual storytelling and creative digital content.</p>
+          <span class="card-label">Kalpokotha</span>
+          <a href="https://kalpokotha.online" target="_blank" rel="noopener noreferrer" class="card-link">Visit Website <span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-visual">
+            <img src="pictures/5.png" alt="WESKSOFT Games logo" width="2000" height="2000" loading="lazy" decoding="async" />
+          </div>
+          <h3>WESKSOFT Games</h3>
+          <p>Creating immersive games, interactive worlds and exciting gaming experiences.</p>
+          <span class="card-label">WaskSoft Games</span>
+          <a href="https://saptadipnightblade0987.itch.io" target="_blank" rel="noopener noreferrer" class="card-link">Play Games <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+    <!-- CEO quotes -->
+    <section class="wisdom" id="wisdom">
+      <div class="section-head reveal">
+        <span class="tag">Words that move the world</span>
+        <h2>Wisdom from the <span class="gradient-text">world's best CEOs</span></h2>
+        <p class="wisdom-sub">30 leaders. 30 lines worth carrying into your next big idea.</p>
+      </div>
+
+      <div class="quote-grid" id="quoteGrid" aria-label="Motivational quotes from world-class CEOs and founders"></div>
+
+      <p class="wisdom-note">Quotes are widely attributed to the people named above.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> WESKSOFT. All rights reserved.</p>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+  <script src="game.js"></script>
+  <script src="quotes.js"></script>
+  <script src="bg.js"></script>
+</body>
+</html>
